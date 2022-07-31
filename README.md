@@ -56,7 +56,7 @@ In Adaptive Boosting (or AdaBoost) a model is trained then evaluated. After eval
 <img width="852" alt="AdaBoostClassifier" src="https://user-images.githubusercontent.com/102195803/182008480-08913bc4-2e4e-497e-a2ee-585989b67200.png">
 
 # Summary
-Before recomend a model, we must clarify what is what we want to detect if a future loan´s customer is high risk or not. i.e., we need to select the  model that lets the least amount of high risk loans be detected,  
+Before recomend a model, we must clarify what is what we want to detect if a future loan´s customer is high risk or not, our model will be the one that let the most amount of high risk loans be detected, i.e. we are looking for high precision.    
 
 Easy Ensemble Classifying (91%)
 SMOTEENN Sampling (76%)
