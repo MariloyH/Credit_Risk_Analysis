@@ -4,7 +4,7 @@ BootCamp Week 17. Machine Learning
 # Overview
 
 Personal loans are a highly demanded and profitable product in banking, but also with a high risk that people will not be able to pay their credits. That is why banks have demanded the creation of sophisticated algorithms using Machine Learning to evaluate applicants before granting a loan. These algorithms analyze various factors, such as age, education, and credit history, which can determine if you will be able to pay the credit.
-In this challenge, we are going to use Supervised ML to build 6 models that help us predict credit risk using imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling before that.  I used:
+In this challenge, we are going to use Supervised Machine Learning with Logistic Regression to analize wich one could help us predict credit risk. As the data is class imbalanced, first we will use 6 resampling methods to prepare the data before:
 
     1. Naive Random Oversampling
     2. SMOTE Oversampling
@@ -17,11 +17,15 @@ In this challenge, we are going to use Supervised ML to build 6 models that help
 ## Deliverable 1 
 First I used the oversampling RandomOverSampler and SMOTE algorithms, and the undersampling ClusterCentroids algorithm to resampled the data imbalanced. For each algorithm, I got the count of the target classes, trained a logistic regression classifier, calculated the balanced accuracy score, generated a confusion matrix, and generated  a classification report.
 
-### *Randdom OverSampling*
+### *Random OverSampling*
+In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. Instances from the minority class are randomly selected and added to the minority class. 
+
 <img width="824" alt="RANDOM " src="https://user-images.githubusercontent.com/102195803/182008449-f0c636aa-b0f8-4518-bca0-b676c7a85f2d.png">
 
 
 ### *SMOTE ALgorithm*
+The synthetic minority oversampling technique (SMOTE), as the previuous the size of the minority is increased, but these new instances are interpolated. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.
+
 <img width="821" alt="SMOTE" src="https://user-images.githubusercontent.com/102195803/182008451-42610ccd-5b0a-4192-970e-326070ca273e.png">
 
 ### *Cluster Centroids*
