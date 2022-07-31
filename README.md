@@ -5,22 +5,26 @@ BootCamp Week 17. Machine Learning
 
 Personal loans are a highly demanded and profitable product in banking, but also with a high risk that people will not be able to pay their credits. That is why banks have demanded the creation of sophisticated algorithms using Machine Learning to evaluate applicants before granting a loan. These algorithms analyze various factors, such as age, education, and credit history, which can determine if you will be able to pay the credit.
 In this challenge, we are going to use Supervised ML to build 6 models that help us predict credit risk using imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling before that.  I used:
-    *1. Naive Random Oversampling
-    *2. SMOTE Oversampling
-    *3. Cluster Centroid Undersampling
-    *4. SMOTEENN Sampling
-    *5. Balanced Random Forest Classifying
-    *6. Easy Ensemble Classifying
+
+    1. Naive Random Oversampling
+    2. SMOTE Oversampling
+    3. Cluster Centroid Undersampling
+    4. SMOTEENN Sampling
+    5. Balanced Random Forest Classifying
+    6. Easy Ensemble Classifying
 
 # Results
 ## Deliverable 1 
-Using your knowledge of the imbalanced-learn and scikit-learn libraries, you’ll evaluate three machine learning models by using resampling to determine which is better at predicting credit risk. First, you’ll use the oversampling RandomOverSampler and SMOTE algorithms, and then you’ll use the undersampling ClusterCentroids algorithm. Using these algorithms, you’ll resample the dataset, view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+First I used the oversampling RandomOverSampler and SMOTE algorithms, and the undersampling ClusterCentroids algorithm to resampled the data imbalanced. For each algorithm, I got the count of the target classes, trained a logistic regression classifier, calculated the balanced accuracy score, generated a confusion matrix, and generated  a classification report.
 
-
+### *Randdom OverSampling*
 <img width="824" alt="RANDOM " src="https://user-images.githubusercontent.com/102195803/182008449-f0c636aa-b0f8-4518-bca0-b676c7a85f2d.png">
 
+
+### *SMOTE ALgorithm*
 <img width="821" alt="SMOTE" src="https://user-images.githubusercontent.com/102195803/182008451-42610ccd-5b0a-4192-970e-326070ca273e.png">
 
+### *Cluster Centroids*
 <img width="837" alt="ClusterCentroids" src="https://user-images.githubusercontent.com/102195803/182008453-7deda868-015e-47f8-bdad-f105f56797da.png">
 
 
