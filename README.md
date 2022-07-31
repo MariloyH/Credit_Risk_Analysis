@@ -29,52 +29,54 @@ The synthetic minority oversampling technique (SMOTE), as the previuous the size
 <img width="821" alt="SMOTE" src="https://user-images.githubusercontent.com/102195803/182008451-42610ccd-5b0a-4192-970e-326070ca273e.png">
 
 ### *Cluster Centroids*
+Cluster centroid undersampling is akin to SMOTE. The algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.
+
 <img width="837" alt="ClusterCentroids" src="https://user-images.githubusercontent.com/102195803/182008453-7deda868-015e-47f8-bdad-f105f56797da.png">
 
 
 ## Deliverable 2
-As the previous case, I got all the information using the SMOTEENN algorithm.
-
-### *SMOTEENNm Algorith*
+In this case, I used SMOTEENN, an approach to resampling that combines aspects of both oversampling and undersampling.
+SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
+    1.  Oversample the minority class with SMOTE.
+    2.  Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
+    
 <img width="826" alt="SMOTEENN" src="https://user-images.githubusercontent.com/102195803/182008445-d34ddc22-aa2d-43bf-8be1-ea068dc04972.png">
 
-
 ## Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk (25 points)
+The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model. For this deliverable, I trained and compared two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. 
 
-Using your knowledge of the imblearn.ensemble library, you’ll train and compare two different ensemble classifiers, BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model. Using both algorithms, you’ll resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+### *BALANCED RANDOM FOREST*
+A random forest algorithm will sample the data and build several smaller, simpler decision trees. Each tree is simpler because it is built from a random subset of features:
 
 <img width="853" alt="BalancedRandomForest" src="https://user-images.githubusercontent.com/102195803/182008465-cf72a950-cfa2-4068-b137-6b7f7be48a39.png">
+
+### *ADAPTATIVE BOOSTING*
+In Adaptive Boosting (or AdaBoost) a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized
 
 <img width="852" alt="AdaBoostClassifier" src="https://user-images.githubusercontent.com/102195803/182008480-08913bc4-2e4e-497e-a2ee-585989b67200.png">
 
 # Summary
+Before recomend a model, we must clarify what is what we want to detect if a future loan´s customer is high risk or not. i.e., we need to select the  model that lets the least amount of high risk loans be detected,  
 
-Deliverable 4 Instructions
-For this deliverable, you’ll write a brief summary and analysis of the performance of all the machine learning models used in this Challenge.
+Easy Ensemble Classifying (91%)
+SMOTEENN Sampling (76%)
+Naive Random Oversampling (72%)
+While this is the most important statistic that is pulled from this analysis, another important statistic is recall rate for low risk as it shows how many low risk loans are flagged as high risk. Looking through the different models, the ones that scored the highest were:
 
-The report should contain the following:
+Balanced Random Forest Classifying (100%)
+Easy Ensemble Classifying (94%)
+After taking these two statistics over the others, we can look at the accurary score to get a picture of how well the model performs in general. The models with the highest accuracy scores were:
 
-Overview of the analysis: Explain the purpose of this analysis.
+Easy Ensemble Classify (92.3%)
+SMOTEENN Sampling (68.1%)
+Balanced Random Forest Classifying (64.8%)
+After factoring in these three main statistics, the model that I would recommend to use for predicting high risk loans is the Easy Ensemble Classifying model.
 
-Results: Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
-
-Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+From this results, we can observe that AdaBoost is the
 
 Deliverable 4 Requirements
 Structure, Organization, and Formatting (6 points)
 The written analysis has the following structure, organization, and formatting:
-
-
-There is a title, and there are multiple sections (2 pt)
-Each section has a heading and subheading (2 pt)
-Links to images are working, and code is formatted and displayed correctly (2 pt).
-Analysis (24 points)
-The written analysis has the following:
-
-Overview of the loan prediction risk analysis:
-
-The purpose of this analysis is well defined (4 pt)
-Results:
 
 There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
 Summary:
