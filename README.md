@@ -22,9 +22,9 @@ In random oversampling, instances of the minority class are randomly selected an
 
 <img width="824" alt="RANDOM " src="https://user-images.githubusercontent.com/102195803/182008449-f0c636aa-b0f8-4518-bca0-b676c7a85f2d.png">
    
-    - Balanced Accuracy 58.75%
-    - Precision High Risk  1%
-    - Recall High Risk 72%
+    - Balanced Accuracy 65.47%
+    - Precision High Risk  1%       Low Risk 100%
+    - Recall High Risk 72%          Low Risk 59%
     
     
 ### *SMOTE ALgorithm*
@@ -32,7 +32,7 @@ The synthetic minority oversampling technique (SMOTE), as the previuous the size
 
 <img width="821" alt="SMOTE" src="https://user-images.githubusercontent.com/102195803/182008451-42610ccd-5b0a-4192-970e-326070ca273e.png">
 
-    - Balanced Accuracy  69%
+    - Balanced Accuracy  66.2%
     - Precision High Risk  1%   Low Risk 100%
     - Recall High Risk   63%    Low Risk 69%
 
@@ -41,20 +41,21 @@ Cluster centroid undersampling is akin to SMOTE. The algorithm identifies cluste
 
 <img width="837" alt="ClusterCentroids" src="https://user-images.githubusercontent.com/102195803/182008453-7deda868-015e-47f8-bdad-f105f56797da.png">
 
-    - Balanced Accuracy 39.81%
+    - Balanced Accuracy 54.47%
     - Precision High Risk  1%   Low Risk 100 %
     - Recall High Risk 69%      Low Risk 40%
     
     
 ## Deliverable 2
-In this case, I used SMOTEENN, an approach to resampling that combines aspects of both oversampling and undersampling.
+### SMOTEENN 
+In this case, I usedSMOTEENN, an approach to resampling that combines aspects of both oversampling and undersampling.
 SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. SMOTEENN is a two-step process:
     1.  Oversample the minority class with SMOTE.
     2.  Clean the resulting data with an undersampling strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
     
 <img width="826" alt="SMOTEENN" src="https://user-images.githubusercontent.com/102195803/182008445-d34ddc22-aa2d-43bf-8be1-ea068dc04972.png">
 
-    - Balanced Accuracy 57.05%
+    - Balanced Accuracy 64.13%
     - Precision High Risk  1%   Low Risk 100 %
     - Recall High Risk 71%      Low Risk 57%
     
@@ -66,7 +67,7 @@ A random forest algorithm will sample the data and build several smaller, simple
 
 <img width="853" alt="BalancedRandomForest" src="https://user-images.githubusercontent.com/102195803/182008465-cf72a950-cfa2-4068-b137-6b7f7be48a39.png">
 
-    - Balanced Accuracy 87.31%
+    - Balanced Accuracy 78.85%
     - Precision High Risk  3%   Low Risk 100 %
     - Recall High Risk 70%      Low Risk 87%
   
@@ -75,7 +76,7 @@ In Adaptive Boosting (or AdaBoost) a model is trained then evaluated. After eval
 
 <img width="852" alt="AdaBoostClassifier" src="https://user-images.githubusercontent.com/102195803/182008480-08913bc4-2e4e-497e-a2ee-585989b67200.png">
 
-    - Balanced Accuracy 94.24%
+    - Balanced Accuracy 93.16%
     - Precision High Risk  9%   Low Risk 100 %
     - Recall High Risk 92%      Low Risk 94%
 
