@@ -21,8 +21,9 @@ First I used the oversampling RandomOverSampler and SMOTE algorithms, and the un
 In random oversampling, instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced. Instances from the minority class are randomly selected and added to the minority class. 
 
 <img width="824" alt="RANDOM " src="https://user-images.githubusercontent.com/102195803/182008449-f0c636aa-b0f8-4518-bca0-b676c7a85f2d.png">
-
-
+    - Balanced Accuracy
+    - Precision
+    - Recall
 ### *SMOTE ALgorithm*
 The synthetic minority oversampling technique (SMOTE), as the previuous the size of the minority is increased, but these new instances are interpolated. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.
 
@@ -56,31 +57,7 @@ In Adaptive Boosting (or AdaBoost) a model is trained then evaluated. After eval
 <img width="852" alt="AdaBoostClassifier" src="https://user-images.githubusercontent.com/102195803/182008480-08913bc4-2e4e-497e-a2ee-585989b67200.png">
 
 # Summary
-Before recomend a model, we must clarify what is what we want to detect if a future loan´s customer is high risk or not, our model will be the one that let the most amount of high risk loans be detected, i.e. we are looking for high precision.    
+Before recomend a model, we must clarify what is what we want to detect if a future loan´s customer is high risk or not, our model will be the one that prevent the least amount of high risk loans pass through undetected. i. e. our model must be must sensitive or with a recall for high-risk high. For this reason, I wil recomend  *AdaBoost Ensemble Classifier (91%)* This model got a the high rate performane (accuracy) with our data: 
+ 
 
-Easy Ensemble Classifying (91%)
-SMOTEENN Sampling (76%)
-Naive Random Oversampling (72%)
-While this is the most important statistic that is pulled from this analysis, another important statistic is recall rate for low risk as it shows how many low risk loans are flagged as high risk. Looking through the different models, the ones that scored the highest were:
-
-Balanced Random Forest Classifying (100%)
-Easy Ensemble Classifying (94%)
-After taking these two statistics over the others, we can look at the accurary score to get a picture of how well the model performs in general. The models with the highest accuracy scores were:
-
-Easy Ensemble Classify (92.3%)
-SMOTEENN Sampling (68.1%)
-Balanced Random Forest Classifying (64.8%)
-After factoring in these three main statistics, the model that I would recommend to use for predicting high risk loans is the Easy Ensemble Classifying model.
-
-From this results, we can observe that AdaBoost is the
-
-Deliverable 4 Requirements
-Structure, Organization, and Formatting (6 points)
-The written analysis has the following structure, organization, and formatting:
-
-There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
-Summary:
-
-There is a summary of the results (2 pt)
-There is a recommendation on which model to use, or there is no recommendation with a justification (3 pt)
 
