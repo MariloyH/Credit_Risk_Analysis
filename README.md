@@ -1,4 +1,4 @@
-# Credit_Risk_Analysis
+# Credit Risk Analysis
 BootCamp Week 17. Machine Learning 
 
 # Overview
